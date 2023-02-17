@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <section id="search">
+        <aside class="aside">Search for a City: </aside>
+        <input type="text" class="input"><br>
+        <button class="button">Search</button>
+    </section>
+
+    <section id="city">
+        <div class="currentCast">'Displayed city name'</div>
+            <div id="temp">Temp: </div>
+            <div id="wind">Wind: </div>
+            <div id="humidity">Humidity: </div>
+    </section>
+
+    <section id="weekCast">5-Day Forecast
+        <div class="forecastBox">
+            <div id="date">
+                <div id="icon">"Insert icon here"</div>
+                <div id="temp">Temp: </div>
+                <div id="wind">Wind: </div>
+                <div id="humidity">Humidity: </div>
+            </div>
+        </div> 
+    </section>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
