@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 header {
@@ -11,11 +12,12 @@ header {
 }
 
 #search {
-    font-size: 30px;
+    margin: 5px;
+    font-size: 25px;
     font-weight: bold;
 }
 
-.input {
+#input {
     width: 250px;
     height: 30px;
     border-radius: 5px;
@@ -24,21 +26,48 @@ header {
     text-indent: 5px;
 }
 
-.button { 
-    width: 250px;
-    height: 25px;
-    border-radius: 5px;
-    background-color: lightskyblue;
+#currentCast {
+    font-size: 35px;
+    font-weight: bold;
 }
 
-.button:hover {
-    
+#button { 
+    width: 250px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: lightskyblue;
+    color: white;
+    font-size: 20px;
+}
+
+.button:active {
+    transform: scale(0.95,0.95);
+    color: #1520A6;
 }
 
 #city {
-    text-align: center;
+    display: inline-block;
+    text-align:left;
+    width: 800px;
+    height: 150px;
+    border: 1px solid #ccc;
+    position: relative;
+    left: 300px;
+    bottom: 80px;
+    line-height: 35px;
+    padding: 10px;
 }
 
 #weekCast {
     text-align: center;
 }
+
+/* .container {
+    margin: 10px;
+    margin-left: 20px;
+}
+
+.col {
+    margin: 40px;
+}
+ */
