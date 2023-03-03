@@ -58,6 +58,23 @@ header {
     padding: 10px;
 }
 
-#weekCast {
+h3 {
+    text-align: left;
+    margin-left: 300px;
+    margin-top: -60px;
+}
+
+#forecast {
     text-align: center;
+}
+
+.row {
+    padding: 30px;
+    padding-left: 10px;
+    margin-left: 0px;
+}
+
+.container {
+    margin: 5px;
+    margin-left: 280px;
 }

@@ -17,7 +17,10 @@
         <aside class="aside">Search for a City: </aside>
         <input type="text" id="input"><br>
         <button id="button">Search</button>
+        <div id="searchContainer"></div>
     </section>
+
+    <form id="historyContainer" class="list-group"></form>
 
     <section id="city">
         <div id="currentCast" class="currentDay"></div>
@@ -27,13 +30,10 @@
             <div id="currentHumidity"></div>
     </section>
 
-    <section id="weekCast"> 5-Day Forecast: 
-        <div class="container text-center" id="forecast">
-            <img id="weekIcon" src="" alt='weather icon'>
-            <div id="weekTemp"></div>
-            <div id="weekWind"></div>
-            <div id="weekHumidity"></div>
-        </div>
+    <section class="col-md-12" id="weekCast"> 
+        <h3>5-Day Forecast:</h3>
+        <div class="row col-md-9" id="forecast"></div>
+        <div id="weekIcon"></div>
     </section>
     
     
