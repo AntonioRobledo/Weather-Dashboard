@@ -13,6 +13,7 @@ var weekForecast = document.querySelector('#forecast')
 var weekTemp = document.querySelector('#weekTemp');
 var weekWind = document.querySelector('#weekWind');
 var weekHumidity = document.querySelector('#weekHumidity');
+var searchContainer = document.getElementById('searchContainer')
 var historyContainer = document.getElementById('historyContainer');
 
 // event listener for search button
@@ -73,50 +74,27 @@ var weekCast = $(`
 `);
 
 //append cards to html
-$('#forecast').append(weekCast);
-        }
-    });
-
+$('#forecast').append(weekCast); 
+            }
+        });
 });
 
 // displays current day 
 var currentDate = dayjs();
 $('.currentDay').text(currentDate.format('MMMM D, YYYY'))
 
-// saves city to local storage
-function storeCity (city) {
-    if (searchHistory.includes(city)) {
-        return;
-    } else {
-        searchHistory.push(city);
-        localStorage.setItem("cities", JSON.stringify(searchHistory));
-    }
-}
+// get form element
+searchBtn.addEventListener("click", function() {
+    const searchTerm = cityInput.value;
+    localStorage.setItem("cities", searchTerm);
+    const searchItem = document.createElement("li");
+    searchItem.textContent = searchTerm;
+    historyContainer.appendChild(searchItem);
+});
 
-// retrieves data from local storage
-function retrieveLocalStorage() {
-/* 	var searchHistory = localStorage.getItem("cities");
-	if (searchHistory !== null) {
-		newList = JSON.parse(searchHistory);
-		return newList;
-	} else {
-		newList = [];
-	}
-	return newList; */
-}
-
-// displays users previous searches
-function displaySearchHistory() {
-/*     $(".list-group-item").remove();
-    searchHistory = retrieveLocalStorage();
-
-    if(searchHistory !== null) {
-        for (var i = 0; i < searchHistory.length; i++) {
-            cityName = searchHistory[i];
-			var displaySearchHistory = $(
-				`<li id="${cityName}"<a href="#" class="list-group-item list-group-item-action list-group-item-primary">${cityName}</li>`
-			);
-			$("#historyContainer").append(displaySearchHistory);
-        }
-    } */
+if(localStorage.getItem("cities")) {
+    cityInput.value = localStorage.getItem("cities");
+    const searchItem = document.createElement("li");
+    searchItem.textContent = localStorage.getItem("cities");
+    historyContainer.appendChild(searchItem);
 }
